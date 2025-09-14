@@ -1,11 +1,15 @@
-import './App.css'
+import type { FC } from "react";
+import AppRouter from "./router";
+import Navbar from "./components/Navbar";
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="flex h-screen items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-3xl font-bold">
-  Hello Tailwind + React + TypeScript 🚀
-</div>
-  )
-}
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <AppRouter />
+    </div>
 
-export default App
+  );
+};
+
+export default App;

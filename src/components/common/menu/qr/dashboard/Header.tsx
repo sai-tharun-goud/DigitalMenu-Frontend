@@ -1,3 +1,4 @@
+// src/components/common/menu/qr/dashboard/Header.tsx
 import type { FC } from "react";
 
 const Header: FC = () => {

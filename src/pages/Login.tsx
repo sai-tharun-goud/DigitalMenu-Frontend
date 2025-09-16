@@ -1,6 +1,7 @@
-import type { FC } from "react";
+// src/pages/Login.tsx
+import React from "react";
 
-const Login: FC = () => {
+const Login = () => {
   return (
     <h1 className="text-xl font-semibold text-center mt-10">
       Restaurant Login / Signup

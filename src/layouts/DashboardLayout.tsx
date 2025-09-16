@@ -1,22 +1,25 @@
-import type { FC, ReactNode } from "react";
-import Sidebar from "../components/common/menu/qr/dashboard/Sidebar";
+import React from "react";
+import { Outlet } from "react-router-dom";
 import Header from "../components/common/menu/qr/dashboard/Header";
+import Sidebar from "../components/common/menu/qr/dashboard/Sidebar";
 
-interface DashboardLayoutProps {
-  children: ReactNode;
-}
+const DashboardLayout: React.FC = () => {
+  return (
+    <div className="flex min-h-screen bg-gray-50">
+      <aside className="w-64 bg-white shadow">
+        <Sidebar />
+      </aside>
 
-const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => (
-  <div className="flex h-screen bg-gray-100">
-    {/* Sidebar */}
-    <Sidebar />
-
-    {/* Main Content */}
-    <div className="flex flex-col flex-1">
-      <Header />
-      <main className="flex-1 p-6 overflow-y-auto">{children}</main>
+      <div className="flex-1 flex flex-col">
+        <header className="bg-white shadow">
+          <Header />
+        </header>
+        <main className="flex-1 p-6">
+          <Outlet />
+        </main>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default DashboardLayout;

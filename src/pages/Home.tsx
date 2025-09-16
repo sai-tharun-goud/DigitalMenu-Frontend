@@ -1,13 +1,13 @@
-import type { FC } from "react";
+// src/pages/Home.tsx
+import React from "react";
 import { Link } from "react-router-dom";
 
-const Home: FC = () => {
+const Home = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div className="mx-auto max-w-7xl px-6 py-24 lg:flex lg:items-center lg:justify-between lg:gap-x-10">
-          {/* Left Content */}
           <div className="max-w-2xl">
             <h1 className="text-4xl font-extrabold sm:text-5xl lg:text-6xl leading-tight">
               Free Digital Menu for Every Restaurant
@@ -16,7 +16,6 @@ const Home: FC = () => {
               Create your menu, generate a QR code, and share it instantly —
               all free, forever.
             </p>
-
             <div className="mt-8 flex gap-x-4">
               <Link
                 to="/login"
@@ -33,7 +32,6 @@ const Home: FC = () => {
             </div>
           </div>
 
-          {/* Right Image / Illustration */}
           <div className="mt-12 lg:mt-0 lg:flex-shrink-0">
             <img
               src="https://dummyimage.com/500x400/4f46e5/ffffff&text=QR+Code+Preview"
